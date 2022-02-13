@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_data/main_page.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -58,7 +59,10 @@ class _FirstScreenState extends State<FirstScreen> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text('Let\'s go'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => MainPage()));
+                        }),
                   ],
                 )),
                 SizedBox(
